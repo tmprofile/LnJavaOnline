@@ -40,11 +40,11 @@ public class classTest {
 
     @Test
     public void testArrays() {
-        int[] numbers = {1, 2, 8};
+        // Change the values in numbers so it will not raise an error.
+        int[] numbers = {1, 2, 3};
         int length = numbers[2];
         char[] chars = new char[length];
-        chars[numbers.length + 4] = 'y';
-        //chars[2] = 'y';
+        chars[numbers.length -1] = 'y';
         System.out.println("Done!");
     }
 
