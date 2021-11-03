@@ -13,6 +13,8 @@ public class classTest {
         System.out.println(output);
     }
 
+
+
     @Test
     public void testConditionals() {
         String a = new String("Wow");
@@ -28,4 +30,15 @@ public class classTest {
             System.out.println("Success!");
         }
     }
+
+    @Test
+    public void testArrays() {
+        int[] numbers = {1, 2, 8};
+        int length = numbers[2];
+        char[] chars = new char[length];
+        chars[numbers.length + 4] = 'y';
+        //chars[2] = 'y';
+        System.out.println("Done!");
+    }
+
 }
