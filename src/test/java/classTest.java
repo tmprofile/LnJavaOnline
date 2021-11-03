@@ -49,6 +49,31 @@ public class classTest {
     }
 
     @Test
+    public void testFunctions(String[] args) {
+        Student[] students = new Student[] {
+                new Student("Morgan", "Freeman"),
+                new Student("Brad", "Pitt"),
+                new Student("Kevin", "Spacey"),
+        };
+        for (Student s : students) {
+            s.printFullName();
+        }
+
+        //class Student {
+        //    private String firstName;
+        //    private String lastName;
+        //   public Student(String firstName, String lastName) {
+        //        this.firstName = firstName;
+        //        this.lastName = lastName;
+        //    }
+            // Your code goes here
+        //    public void printFullName() {
+        //        System.out.println (this.firstName+" "+this.lastName);
+        //    }
+        //}
+    }
+
+    @Test
     public void testLoops() {
         // Loop through and print out all even numbers, each in a separate line,
         // from the numbers list in the same order they are received.
@@ -67,8 +92,12 @@ public class classTest {
                 System.out.println(numbers[i]);
             }
         }
+        
 
 
 
+
+
+        
     }
 }
