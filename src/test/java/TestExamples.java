@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class classTest {
+public class TestExamples {
     @Test
     public void testHelloWorld() {
         // Print "Hello, World!" to the console.
@@ -49,7 +49,7 @@ public class classTest {
     }
 
     @Test
-    public void testFunctions(String[] args) {
+    public void testFunctions() {
         Student[] students = new Student[] {
                 new Student("Morgan", "Freeman"),
                 new Student("Brad", "Pitt"),
@@ -58,19 +58,6 @@ public class classTest {
         for (Student s : students) {
             s.printFullName();
         }
-
-        //class Student {
-        //    private String firstName;
-        //    private String lastName;
-        //   public Student(String firstName, String lastName) {
-        //        this.firstName = firstName;
-        //        this.lastName = lastName;
-        //    }
-            // Your code goes here
-        //    public void printFullName() {
-        //        System.out.println (this.firstName+" "+this.lastName);
-        //    }
-        //}
     }
 
     @Test
@@ -92,12 +79,5 @@ public class classTest {
                 System.out.println(numbers[i]);
             }
         }
-        
-
-
-
-
-
-        
     }
 }
