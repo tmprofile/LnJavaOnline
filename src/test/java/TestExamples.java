@@ -91,4 +91,14 @@ public class TestExamples {
             p.print();
         }
     }
+
+    @Test
+    public void testInheritance() {
+        // Create a house front door class which inherits from the Door class and open it.
+        // Assume the house door has a locked doorknob and it swings into the house.
+        // Hint: Your code should use the super keyword.
+        FrontDoor d1 = new FrontDoor(200, 80, true, false);
+        if (!d1.openTheDoor() && !d1.isSwingsOut)
+            System.out.println("Входная дверь " + d1.doorHeight + "x" + d1.doorWidth + " (открывается внутрь), замок закрыт: " + d1.isLocked);
+    }
 }
