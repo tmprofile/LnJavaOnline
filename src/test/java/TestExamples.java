@@ -80,4 +80,15 @@ public class TestExamples {
             }
         }
     }
+
+    @Test
+    public void testObject() {
+        // Write a new method in Point called scale, that will make the point closer by half to (0,0).
+        // So for example, point (8, 4) after scale will be (4, 2).
+        Point p = new Point(32, 32);
+        for (int i = 0; i < 5; i++) {
+            p.scale();
+            p.print();
+        }
+    }
 }
