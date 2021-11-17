@@ -1,4 +1,14 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+import java.time.Duration;
+
 
 public class TestExamples {
     @Test
@@ -100,5 +110,22 @@ public class TestExamples {
         FrontDoor d1 = new FrontDoor(200, 80, true, false);
         if (!d1.openTheDoor() && !d1.isSwingsOut)
             System.out.println("Входная дверь " + d1.doorHeight + "x" + d1.doorWidth + " (открывается внутрь), замок закрыт: " + d1.isLocked);
+    }
+
+
+    @Test
+    public void testWebDriver() {
+        //System.setProperty("webdriver.grome.driver", "˜/Dev/chromedriver/chromedriver");
+        WebDriver driver = new SafariDriver();
+        driver.get("https://google.com");
+        WebElement input = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input"));
+        WebElement button = driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]"));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //WebElement element1 = (new WebDriverWait(driver, Duration.ofSeconds(10))
+        //        .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input/[@aria-label='Найти']"))));
+        input.click();
+        input.sendKeys("Java Language Tutorial", Keys.ENTER);
+        button.click();
+        //Assert.asertEquals
     }
 }
